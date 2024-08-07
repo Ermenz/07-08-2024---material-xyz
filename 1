@@ -1,0 +1,45 @@
+#include <string.h>
+#include <stdio.h>
+#include <stdbool.h>
+#include <locale.h>
+
+
+int main(){
+
+
+
+char pergunta1[10];
+char pergunta2[10];
+char pergunta3[10];
+
+
+printf("O material é imprecindível ?");
+scanf("%s", &pergunta1);
+
+
+
+printf("O material é linha de frente ?");
+scanf("%s", &pergunta2);
+
+
+printf("O material similar ?");
+scanf("%s", &pergunta3);
+
+
+if (pergunta1 == "não") {
+     printf("Materias x \n"); 
+ } else if(strcmp(pergunta1, "sim") == 0 && strcmp(pergunta2, "sim") == 0 && strcmp(pergunta3, "sim") == 0) {
+  printf("Materias y \n"); 
+ } else if(strcmp(pergunta1, "sim") == 0 && strcmp(pergunta2, "sim") == 0 && strcmp(pergunta3, "nao") == 0) {
+ 	 printf("Materias z \n"); 
+ } else if(strcmp(pergunta1, "sim") == 0 && strcmp(pergunta2, "nao") == 0 && strcmp(pergunta3, "sim") == 0) {
+   printf("Materias x \n"); 
+} else if(strcmp(pergunta1, "sim") == 0 && strcmp(pergunta2, "nao") == 0 && strcmp(pergunta3, "nao") == 0) {
+   printf("Materias x \n"); 
+} else if(strcmp(pergunta1, "nao") == 0 && strcmp(pergunta2, "sim") == 0 && strcmp(pergunta3, "nao") == 0) {
+   printf("Materias x \n"); 
+}
+
+
+return 0;
+}
